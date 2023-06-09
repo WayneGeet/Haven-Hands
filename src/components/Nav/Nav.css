@@ -1,0 +1,40 @@
+@media screen and (min-width: 1024px) {
+    .nav__container{
+        @apply mx-auto py-5 bg-yellow-400 flex items-center px-4 relative
+     }
+     
+     .navShadow{
+         box-shadow:-2rem 2rem 1rem rgba(0, 0, 0, 0.4)
+     }
+     .btn{
+         @apply px-4 py-2 border border-blue-700 rounded-md shadow-sm hover:shadow-sky-500 relative
+     }
+     
+     .btn::before{
+         @apply w-5 h-5 bg-red-600 absolute top-0 left-0
+     }
+     
+     .navItem{
+         position:relative;
+         transition:400ms;
+     }
+     .navItem::after{
+         content:"";
+         width:0%;
+         height:3px;
+         background-color:rgb(212, 212, 37);
+         position:absolute;
+         bottom:5px;
+         transition:400ms;
+     }
+     
+     .navItem:hover::after{
+         width:100%;
+     }
+}
+
+.hide-bg{
+    mix-blend-mode:multiply;
+    filter:contrast(1);
+    width:200px;
+}

@@ -1,0 +1,38 @@
+
+
+@media screen and (min-width: 1024px) {
+    .bgImage{
+        background-image:url("../../images/boy_child_png.png");
+        background-position:left center  ;
+        background-size: contain;
+        background-repeat:no-repeat;
+        backdrop-filter:blur(5px)
+        
+    }
+    .mission{
+        position:relative;
+        z-index:100;
+    }
+    .btn__sponsor{
+        position:relative;
+        overflow:hidden;
+        transition:all 300ms ease-out;  
+      }
+      
+      .btn__sponsor:hover{
+        background-color:#113155;
+        border:none;
+        border-radius:3px;
+      }
+    /* .mission::before{
+        content:" ";
+        width:100%;
+        height:100%;
+        background-color:rgb(255, 255, 255);
+        display:block;
+        position:absolute;
+        top:0;
+        left:0;
+        z-index:0;
+    } */
+}
