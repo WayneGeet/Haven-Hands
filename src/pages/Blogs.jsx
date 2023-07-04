@@ -1,6 +1,5 @@
 import {useState} from "react";
 import friends from "../images/friends.jpg"
-import Button from "../components/Buttons/Button";
 import {BiDonateHeart} from "react-icons/bi";
 import {AiOutlineArrowRight} from "react-icons/ai";
 import Select from "../components/Select/Select"
@@ -31,7 +30,7 @@ const Blogs = () => {
               </li>
             </ul>
           </div>
-          <div className="w-full relative  bg-sky-700 col-span-3">
+          <div className="w-full relative bg-[#132c49] col-span-3">
             <Select value={selected}/>
           </div>
           
@@ -47,7 +46,6 @@ const Blogs = () => {
                 their highschool education.
               </p>
               <div className="mt-10">
-              <Button px={"px-10"} py={"py-2"} bg={"bg-[#fde74c]"} color={"text-[#0a1828]"}>Donate <span className="pl-3 text-xl"><BiDonateHeart/></span> </Button>
               </div>
 
             </div>

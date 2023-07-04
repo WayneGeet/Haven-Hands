@@ -42,7 +42,7 @@ const Nav = () => {
     initial={"hidden"}
     animate={"visible"}
     transition={{staggerChildren:0.6}}
-    className={`${scrolled ? "md:bg-[#175163] z-[1000] transition-all duration-500" : "md:bg-transparent" }
+    className={`${scrolled ? "md:bg-[var(--bright-cyan)] z-[1000] transition-all duration-500 text-blue" : "md:bg-transparent" }
     fixed z-50 w-screen top-0 left-0 bg-blue-400 `}>
 
       <motion.div
@@ -67,11 +67,11 @@ const Nav = () => {
             return(
             <li key={key} 
             onClick = {()=>setIsActive((prev)=>!prev)}
-            className={`${key===0 || item==='Sponsor' ? "md:ml-auto" : ""} text-white border border-white
+            className={`${key===0 || item==='Sponsor' ? "md:ml-auto" : ""} text-[var(--grayish-blue)] border border-white
              flex justify-center bg-red-300 md:bg-transparent md:border-none md:py-3`}>
 
               <NavLink
-              className={({isActive}) => isActive ? `${item !== "Sponsor" ? "text-yellow-300 font-bold py-2" : "text-white basis-full flex justify-center py-3 md:rounded-xl md:ml-auto md:bg-white md:text-blue-700 md:px-5"}` : `${item === "Sponsor" ?
+              className={({isActive}) => isActive ? `${item !== "Sponsor" ? "text-orange-400 font-bold py-2" : "text-[var(--grayish-blue)] basis-full flex justify-center py-3 md:rounded-xl md:ml-auto md:bg-white md:text-blue-700 md:px-5"}` : `${item === "Sponsor" ?
               "md:rounded-xl md:ml-auto md:bg-white md:text-blue-700 md:px-5 transition-colors duration-500 hover:text-yellow-300 hover:bg-[#C2E812] ": "navItem"} basis-full flex justify-center py-3`} to={path}>{item}</NavLink>
             </li>
             )

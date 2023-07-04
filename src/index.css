@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ### Primary
+
+- Dark Blue: hsl(233, 26%, 24%)
+- Lime Green: hsl(136, 65%, 51%)
+- Bright Cyan: hsl(192, 70%, 51%)
+
+### Neutral
+
+- Grayish Blue: hsl(233, 8%, 62%)
+- Light Grayish Blue: hsl(220, 16%, 96%)
+- Very Light Gray: hsl(0, 0%, 98%)
+- White: hsl(0, 0%, 100%) */
+
+:root{
+  --dark-blue:hsl(233, 26%, 24%);
+  --lime-green:hsl(136, 65%, 51%);
+  --bright-cyan:hsl(192, 70%, 51%);
+
+  --grayish-blue: hsl(233, 8%, 62%);
+  --light-gray-blue:hsl(220, 16%, 96%);
+  --very-light-gray:hsl(0, 0%, 98%);
+
+}
+
 *{
   margin:0;
   padding:0;
@@ -12,7 +36,7 @@
 body{
   scroll-behavior: smooth;
   overflow-x:hidden;
-  font-family:'Poppins', sans-serif !important;
+  font-family:serif !important;
   background-color:#178582;
 }
 
@@ -63,9 +87,5 @@ body{
   outline:none;
 }
 
-.clip{
-  clip-path:polygon(0% 5%, 100% 0%, 100% 95%, 0% 100% );
-  background-color:#125351;
-}
 
 

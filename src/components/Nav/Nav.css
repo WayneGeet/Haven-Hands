@@ -31,6 +31,8 @@
      .navItem:hover::after{
          width:100%;
      }
+
+     
 }
 
 .hide-bg{
