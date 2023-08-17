@@ -2,6 +2,38 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .grid-auto-rows-minmax {
+    grid-auto-rows: auto;
+  }
+  .container{
+    max-width:1100px;
+    margin:0 auto 0;
+  }
+  .step:not(:first-child):before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:3px;
+    background-color: slategray;
+    @apply -right-5 top-1/3 -translate-y-2/4
+  }
+
+  .active>p{
+    @apply bg-green-500 border-[--dark-blue] 
+  }
+  
+  .text_truncate{
+    display:-webkit-box;
+    -webkit-box-orient:vertical;
+    -webkit-line-clamp:3;
+    overflow:hidden;
+  }
+}
+
+
+
+
 /* ### Primary
 
 - Dark Blue: hsl(233, 26%, 24%)
@@ -15,6 +47,8 @@
 - Very Light Gray: hsl(0, 0%, 98%)
 - White: hsl(0, 0%, 100%) */
 
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
+
 :root{
   --dark-blue:hsl(233, 26%, 24%);
   --lime-green:hsl(136, 65%, 51%);
@@ -26,24 +60,136 @@
 
 }
 
-*{
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: 'Crimson Text', serif;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-}
+  font-family: 'Crimson Text', serif;
+} */
 
 /* CSS resets */
 body{
   scroll-behavior: smooth;
   overflow-x:hidden;
-  font-family:serif !important;
-  background-color:#178582;
+  background-color:hsl(220, 16%, 96%);
 }
 
-.container{
-  max-width:1200px;
-  margin: auto 2rem;
-  padding:0 1rem;
+
+.btn_pry{
+  background-color:var(--bright-cyan);
+  color:white;
+  border:none;
+  padding:10px 2rem;
+  margin-top:1rem;
+  transition:all 400ms ease-in;
+  box-shadow:0 0.5rem 1rem hsla(192, 70%, 51%, 0.5)
+}
+
+.btn_sec{
+  background-color:var(--bright-cyan);
+  color:white;
+  border:none;
+  padding:8px 1.9rem;
+  margin-top:1rem;
+  transition:all 400ms ease-in;
+  box-shadow:0 0.5rem 1rem hsla(192, 70%, 51%, 0.5);
+  width:fit-content;
+  display:flex;
+  align-items:center;
+  gap:0.4rem;
+}
+.btn_hollow{
+  color:var(--grayish-blue);
+  border:2px solid var(--bright-cyan);
+  padding:5px 1.4rem;
+  margin-top:1rem;
+  transition:all 400ms ease-in;
+  width:fit-content;
+  display:flex;
+  align-items:center;
+}
+
+.btn_hollow:hover{
+  border:2px solid rgb(250, 177, 41);
+}
+
+.btn_pry:hover, .btn_sec:hover{
+  opacity:0.5;
 }
 
 
@@ -86,6 +232,55 @@ body{
   border:none;
   outline:none;
 }
+
+.shade{
+  position:relative;
+}
+
+.shade::after{
+  content:"";
+  width:100%;
+  height:100%;
+  background:linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5));
+  position:absolute;
+  bottom:0;
+  left:0;
+  border-radius: inherit;
+  opacity:0;
+  transition:all 400ms ease-out;
+}
+
+.shade:hover::after{
+  opacity:1;
+}
+
+.contact_bg{
+  background: url(./images/kids_sitting.jpg);
+  background-size:cover;
+  background-repeat:no-repeat;
+  background-position:center top;
+}
+
+small{
+  position:relative;
+  font-size:0.8rem;
+}
+
+
+.article_support{
+  background-color: hsl(235, 24%, 22%);
+}
+
+.article_support:hover > .item1{
+  background-color: var(--bright-cyan);
+}
+
+
+
+
+
+
+
 
 
 

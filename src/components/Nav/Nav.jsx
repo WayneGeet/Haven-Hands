@@ -1,9 +1,10 @@
 import {useState, useEffect} from "react";
 import {Link, NavLink} from "react-router-dom";
 // import GoThreeBars from "react-icons/go";
-import logo from "../../images/logo.jpg";
+import logo from "./logo.png";
 import {motion} from "framer-motion"
-import {navItems} from "../../data"
+import {navItems} from "../../others/data";
+
 
 import "./Nav.css";
  
@@ -42,7 +43,7 @@ const Nav = () => {
     initial={"hidden"}
     animate={"visible"}
     transition={{staggerChildren:0.6}}
-    className={`${scrolled ? "md:bg-[var(--bright-cyan)] z-[1000] transition-all duration-500 text-blue" : "md:bg-transparent" }
+    className={`${scrolled ? "md:bg-[var(--dark-blue)] z-[1000] transition-all duration-500 text-blue" : "md:bg-transparent" }
     fixed z-50 w-screen top-0 left-0 bg-blue-400 `}>
 
       <motion.div
@@ -52,9 +53,9 @@ const Nav = () => {
       mx-auto flex items-center px-4 z-[99]">
 
         {/* Logo : flex item 1 */}
-        <div className="w-10 h-10 rounded-full">
+        <div className="w-20 overflow-hidden">
           <Link onClick={()=>{setIsActive(false)}} to = "/">
-            <img className="hide-bg" src={logo} alt="Logo" />
+            <img className="w-full aspect-video " src={logo} alt="Logo" />
           </Link> 
         </div>
         
