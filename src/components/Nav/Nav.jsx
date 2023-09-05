@@ -1,15 +1,16 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useContext} from "react";
 import {Link, NavLink} from "react-router-dom";
 // import GoThreeBars from "react-icons/go";
 import logo from "./logo.png";
 import {motion} from "framer-motion"
 import {navItems} from "../../others/data";
-
-
+import AuthContext from "../../comp_two/Context/AuthContext"
+// import css
 import "./Nav.css";
  
-
 const Nav = () => {
+  const {name} = useContext(AuthContext)
+  console.log(name)
   const [isActive, setIsActive] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 

@@ -7,7 +7,7 @@ const Contact = () => {
         <h2 className="text-5xl font-bold text-orange-400">Be part of the <span>journey</span></h2>
       </div>
       <div className="px-5 py-4 max-w-xl w-full">
-        <div className=" px-8 py-5 rounded-lg bg-[#eee] bg-opacity-20 backdrop-blur-lg">
+        <div className="px-8 py-5 rounded-lg bg-[#eee] bg-opacity-20 backdrop-blur-lg">
           <ContactUs/>
         </div>
         

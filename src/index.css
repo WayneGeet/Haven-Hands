@@ -64,7 +64,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: 'Crimson Text', serif;
+  font-family: Geneva, Tahoma, sans-serif;
 }
 
 /* Remove default margin */
@@ -146,9 +146,8 @@ select {
 body{
   scroll-behavior: smooth;
   overflow-x:hidden;
-  background-color:hsl(220, 16%, 96%);
+  /* background-color:hsl(220, 16%, 96%); */
 }
-
 
 .btn_pry{
   background-color:var(--bright-cyan);
@@ -191,8 +190,6 @@ body{
 .btn_pry:hover, .btn_sec:hover{
   opacity:0.5;
 }
-
-
 
 /* Card */
 .card{
@@ -275,7 +272,26 @@ small{
   background-color: var(--bright-cyan);
 }
 
+.goal_what_we_do{
+  position:relative;
+  left:1rem;
+  padding:0.3rem 0rem;
+  color:var(--grayish-blue);
+  
+}
 
+.goal_what_we_do::before{
+  content:"";
+  width:0.6rem;
+  height:0.6rem;
+  background-color:var(--bright-cyan);
+  border-radius:100%;
+  border:none;
+  position:absolute;
+  top:50%;
+  left:-1rem;
+  transform:translateY(-50%);
+}
 
 
 

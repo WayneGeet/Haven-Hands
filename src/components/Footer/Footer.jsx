@@ -17,10 +17,10 @@ const Footer = () => {
                     porro delectus optio obcaecati placeat, magnam deleniti aliquam, impedit quae.
                 </p>
                 <div className="mt-[1.5rem] flex gap-10 items-center">
-                    <a className="bg-[--grayish-blue] p-[0.7rem] border border-transparent rounded-[0.6rem] transition-all hover:bg-transparent hover:border-[--dark-blue] duration-700" href="https://www.linkedin.com//" target="_blank" rel="noreferrer noopener"><AiFillLinkedin/> </a>
-                    <a className="bg-[--grayish-blue] p-[0.7rem] border border-transparent rounded-[0.6rem] transition-all hover:bg-transparent hover:border-[--dark-blue] duration-700" href="https://www.linkedin.com//" target="_blank" rel="noreferrer noopener"><AiFillTwitterCircle/> </a>
-                    <a className="bg-[--grayish-blue] p-[0.7rem] border border-transparent rounded-[0.6rem] transition-all hover:bg-transparent hover:border-[--dark-blue] duration-700" href="https://www.linkedin.com//" target="_blank" rel="noreferrer noopener"><AiFillFacebook/> </a>
-                    <a className="bg-[--grayish-blue] p-[0.7rem] border border-transparent rounded-[0.6rem] transition-all hover:bg-transparent hover:border-[--dark-blue] duration-700" href="https://www.linkedin.com//" target="_blank" rel="noreferrer noopener"><AiFillInstagram/> </a>
+                    <a className="bg-[--dark-blue] text-lg mb-10 p-[0.4rem] border border-transparent rounded-[0.6rem] transition-all hover:bg-transparent hover:border-[--dark-blue] duration-700" href="https://www.linkedin.com//" target="_blank" rel="noreferrer noopener"><AiFillLinkedin/> </a>
+                    <a className="bg-[--dark-blue] text-lg mb-10 p-[0.4rem] border border-transparent rounded-[0.6rem] transition-all hover:bg-transparent hover:border-[--dark-blue] duration-700" href="https://www.linkedin.com//" target="_blank" rel="noreferrer noopener"><AiFillTwitterCircle/> </a>
+                    <a className="bg-[--dark-blue] text-lg mb-10 p-[0.4rem] border border-transparent rounded-[0.6rem] transition-all hover:bg-transparent hover:border-[--dark-blue] duration-700" href="https://www.linkedin.com//" target="_blank" rel="noreferrer noopener"><AiFillFacebook/> </a>
+                    <a className="bg-[--dark-blue] text-lg mb-10 p-[0.4rem] border border-transparent rounded-[0.6rem] transition-all hover:bg-transparent hover:border-[--dark-blue] duration-700" href="https://www.linkedin.com//" target="_blank" rel="noreferrer noopener"><AiFillInstagram/> </a>
                 </div>
             </article>
 

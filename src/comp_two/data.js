@@ -49,3 +49,17 @@ export const causes = [
     }
     
 ]
+
+export const faqs = [
+    {faq:"Who does your organization serve?",
+    answer:"Our organization focuses on serving vulnerable communities, including street children, the elderly, and people with disabilities (PWD). We are committed to improving their lives through targeted programs and support."},
+    {faq:"How can I get involved as a volunteer?",
+    answer:"Volunteering with us is easy! Simply visit our website's 'Volunteer' page and fill out the application form. We offer various opportunities based on your skills and interests, allowing you to contribute meaningfully to our initiatives."},
+    {faq:"Where does my donation go?",
+    answer:"Your donation directly supports our programs and services for vulnerable communities. We allocate funds to provide essential resources, education, healthcare, and empowerment opportunities, ensuring that your contribution makes a tangible difference."},
+    {faq:"How do you ensure the sustainability of your projects",
+    answer:"Sustainability is a core principle. We collaborate with local partners, engage community members, and establish long-term solutions. By empowering beneficiaries with skills and resources, we aim to create self-sufficiency and lasting positive change."},
+    {faq:"Can I refer someone who might benefit from your services?",
+    answer:"Absolutely! If you know someone who could benefit from our support, please reach out to us through the 'Contact' page on our website. We'll assess their needs and explore how we can extend a helping hand. Your referral could make a significant impact on their life."},
+
+]

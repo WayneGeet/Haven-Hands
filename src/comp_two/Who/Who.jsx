@@ -1,14 +1,17 @@
-import React from 'react'
+import { LazyLoadImage } from 'react-lazy-load-image-component';
+import 'react-lazy-load-image-component/src/effects/blur.css';
+import {BsArrowUpRight} from "react-icons/bs"
+
 import {FaQuestion} from "react-icons/fa";
 import kid_who from "../../images/kid_goat.jpg";
 import old_who from "../../images/teen3.jpg"
-import SectionHead from "../../components/SectionHead";
-import {GoTriangleRight} from 'react-icons//go';
+// import SectionHead from "../../components/SectionHead";
+// import {GoTriangleRight} from 'react-icons//go';
 
 const Who = () => {
   return (
     <section className="py-10 bg-[--light-gray-blue]">
-        <div className="flex flex-col items-center justify-center px-4 mx-auto gap-4
+        <div className="container flex flex-col items-center justify-center px-4 mx-auto gap-4
          md:grid md:grid-cols-2 md:gap-20 ">
             <section className="grid grid-cols-2 grid-rows-2 gap-2">
                 <div className="bg-[--dark-blue] rounded-md relative">
@@ -18,11 +21,11 @@ const Who = () => {
                     </h2>
                 </div>
                 <div className="overflow-hidden rounded-md h-[12rem]">
-                    <img className="duration-500 transition-transform hover:scale-105" src={kid_who} alt="kid carrying goat" />
+                    <LazyLoadImage effect="blur" className="duration-500 transition-transform hover:scale-105" src={kid_who} alt="kid carrying goat" />
                 </div>
 
                 <div className="rounded-md col-span-2 overflow-hidden h-[12rem]">
-                    <img className="duration-500 transition-transform hover:scale-105" src={old_who} alt="" />
+                    <LazyLoadImage effect="blur" className="duration-500 transition-transform hover:scale-105" src={old_who} alt="" />
                 </div>
             </section>
             
@@ -36,9 +39,11 @@ const Who = () => {
                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis fuga architecto quis 
                         qui neque sit aut dolor culpa laudantium voluptate, sequi accusamus rerum porro repellat.
                     </p>
-                    <button type="button" className="inline-block font-bold text-white bg-[--dark-blue] rounded-md px-4 py-2
-                    text-center text-xl mt-10 md:ml-auto hover:text-[--bright-cyan]"><a href="#">Learn More</a></button>
-
+                    <button type="button" className="flex gap-2 items-center font-bold text-white bg-[--dark-blue] whitespace-nowrap rounded-md px-4 py-2
+                    text-center text-xl mt-10 md:ml-auto md:hover:translate-x-2 hover:bg-transparent md:transition-all md:duration-500 md:hover:text-[--bright-cyan]">
+                        <a href="#">Learn More </a>
+                        <span className="flex"><BsArrowUpRight size={20}/></span>
+                    </button>
                 </div>
             </section>
         </div>

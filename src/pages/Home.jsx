@@ -2,9 +2,7 @@ import React from 'react';
 import Hero from "../components/Hero/Hero";
 import About from "./About";
 import NewsLetter from "../components/NewsLetter/NewsLetter";
-import Testimonials from "../components/Testimonials/Testimonial";
-import SupportUs from "../components/Support/SupportUs";
-import FAQs from '../pages/FAQs';
+import FAQs from '../comp_two/faq/Faqs';
 import Footer from "../components/Footer/Footer";
 // New ones
 import Help from "../comp_two/Help/Help";
@@ -24,7 +22,7 @@ const Home = () => {
       {/* <About/> */}
       {/* <SupportUs/> */}
       {/* <Testimonials/> */}
-      {/* <FAQs/>       */}
+      <FAQs/>      
       <Footer/>
       {/* <Blogs/>
       <NewsLetter/> */}

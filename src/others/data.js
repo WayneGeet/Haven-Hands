@@ -25,8 +25,8 @@ export const navItems = [{item:"Home",path:"/"},
 {item:"Contact", path:"/contact"},
 {item:"Programs", path:"/programs"},
 {item:"FAQ", path:"/faq"},
-{item:"Sponsor", path:"/sponsor"},
-{item:"Learn More", path:"/leanmore"}
+{item:"Donate", path:"/donate"},
+{item:"Partner", path:"/contact"}
   ]
 
 export const info1 = [
