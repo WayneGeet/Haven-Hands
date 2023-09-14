@@ -1,8 +1,10 @@
 import {ContactUs} from "../components/Form/Form";
 import location from '../images/location.png'
+import Footer from "../components/Footer/Footer"
 const Contact = () => {
   return (
-    <div  className="flex justify-center items-center contact_bg mt-16 bg-sky-700 md:grid md:grid-cols-2 min-h-[100vh] ">
+    <>
+    <div  className="flex justify-center items-center contact_bg bg-sky-700 md:grid md:grid-cols-2 min-h-[100vh] ">
       <div className="hidden md:flex items-center justify-center bg-white w-full h-3/4">
         <h2 className="text-5xl font-bold text-orange-400">Be part of the <span>journey</span></h2>
       </div>
@@ -12,8 +14,9 @@ const Contact = () => {
         </div>
         
       </div>
-      
     </div>
+    <Footer/>
+    </>
   )
 }
 

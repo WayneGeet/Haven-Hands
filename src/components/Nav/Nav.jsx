@@ -63,17 +63,16 @@ const Nav = () => {
         {/* Nav items: flex item 2 */}
         <motion.ul 
         variants={navVariant}
-        className={`${isActive ? "flex":"hidden"} flex-col absolute top-full right-0 w-1/2 
-         md:flex md:flex-row md:items-center md:basis-full md:gap-7 md:relative `}>
+        className={`flex-col absolute top-full right-0 w-1/2 
+         md:flex md:flex-row md:items-center md:gap-7 md:relative md:w-full md:justify-end`}>
           {navItems.map(({item, path}, key) => {
             return(
             <li key={key} 
             onClick = {()=>setIsActive((prev)=>!prev)}
-            className={`${key===0 || item==='Sponsor' ? "md:ml-auto" : ""} text-[var(--grayish-blue)] border border-white
-             flex justify-center bg-red-300 md:bg-transparent md:border-none md:py-3`}>
+            className={`text-white md:py-3`}>
 
               <NavLink
-              className={({isActive}) => isActive ? `${item !== "Sponsor" ? "text-orange-400 font-bold py-2" : "text-[var(--grayish-blue)] basis-full flex justify-center py-3 md:rounded-xl md:ml-auto md:bg-white md:text-blue-700 md:px-5"}` : `${item === "Sponsor" ?
+              className={({isActive}) => isActive ? `${item !== "Donate" ? "text-orange-400 font-bold py-2" : "text-white basis-full flex justify-center py-3 md:rounded-xl md:ml-auto md:bg-white md:text-blue-700 md:px-5"}` : `${item === "Donate" ?
               "md:rounded-xl md:ml-auto md:bg-white md:text-blue-700 md:px-5 transition-colors duration-500 hover:text-yellow-300 hover:bg-[#C2E812] ": "navItem"} basis-full flex justify-center py-3`} to={path}>{item}</NavLink>
             </li>
             )

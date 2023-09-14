@@ -9,6 +9,7 @@
   .container{
     max-width:1100px;
     margin:0 auto 0;
+    padding-inline:2rem;
   }
   .step:not(:first-child):before{
     content:"";
@@ -32,7 +33,7 @@
 }
 
 
-
+/* kid-img */
 
 /* ### Primary
 
@@ -47,7 +48,7 @@
 - Very Light Gray: hsl(0, 0%, 98%)
 - White: hsl(0, 0%, 100%) */
 
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
 
 :root{
   --dark-blue:hsl(233, 26%, 24%);
@@ -64,7 +65,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
-  font-family: Geneva, Tahoma, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Remove default margin */
@@ -293,10 +294,75 @@ small{
   transform:translateY(-50%);
 }
 
+.banner {
+  background-image:url("./images/kids_learning.jpg");
+  background-position:center;
+  background-repeat:no-repeat;
+  background-size: cover;
+}
+
+.banner::before {
+  content:'';
+  position:absolute;
+  left:0;
+  top:0;
+  right:0;
+  bottom:0;
+  background-color: rgba(5, 5, 5, 0.5);
+}
+
+.main-text {
+  font-size:3.5rem;
+}
+
+.card-help {
+  display:flex;
+}
+
+@media screen and (max-width: 936px) {
+   .container{
+    padding-inline:2rem;
+   }
+}
+
+@media screen and (max-width:898px){
+  .main-text {
+    font-size:2.8rem;
+    color:rgb(221, 221, 221);
+  }
+
+  .m-btn {
+    padding-inline:1.4rem;
+  }
+
+  
+}
 
 
-
-
-
-
-
+@media screen and (max-width:767px){
+  .hero {
+    background-image:url("./images/kid_playing.jpg");
+    background-position:top;
+    background-size:cover;
+    background-repeat:no-repeat;
+  }
+ 
+  .hero::before {
+    position:absolute;
+    content:"";
+    right:0;
+    left:0;
+    top:0;
+    bottom:0;
+  }
+  
+  .card-help {
+    display:block;
+    width:100%;
+    background-color:red;
+  }
+ 
+  .kid-img {
+    display:none;
+  }
+}

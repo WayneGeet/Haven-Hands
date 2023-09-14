@@ -1,6 +1,7 @@
 import {RiArrowDropDownLine} from "react-icons/ri"
 import {motion, AnimatePresence} from "framer-motion"
 
+
 const Faq = ({que, ans, isActive, onClick}) => {
   return (
     <motion.section

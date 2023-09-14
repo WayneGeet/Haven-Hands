@@ -9,7 +9,8 @@ import Help from "../comp_two/Help/Help";
 import Info from "../comp_two/Info";
 import Who from "../comp_two/Who/Who";
 import OurCause from "../comp_two/OurCauses/OurCause"
-import What from "../comp_two/What/What"
+import What from "../comp_two/What/What";
+import Banner from "../comp_two/Banner/Banner"
 const Home = () => {
   return (
     <div  className="mx-auto">
@@ -18,6 +19,7 @@ const Home = () => {
       <Info/>
       <Who/>
       <What/>
+      <Banner/>
       <OurCause/>
       {/* <About/> */}
       {/* <SupportUs/> */}

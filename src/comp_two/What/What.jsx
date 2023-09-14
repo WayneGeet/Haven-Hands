@@ -9,17 +9,18 @@ import {BsArrowUpRight} from "react-icons/bs"
 const What = () => {
   return (
     <section className="py-10 bg-[--light-gray-blue]">
-        <div className="container flex flex-col-reverse gap-4 md:grid md:grid-cols-2 md:gap-20 items-center justify-center ">
+        <div className="container flex flex-col-reverse gap-4 md:grid md:grid-cols-2 md:gap-20 items-center justify-center
+         md:items-start ">
 
             <div className="flex flex-col justify-start items-center gap-4">
-                <h3 className="text-[--dark-blue] font-semibold text-xl">To improve the welfare of persons with disability,
-                promote access to quality education healthcare services, human rights and relief of poverty
+                <h3 className="text-[--dark-blue] font-semibold text-xl"> We are dedicated to improving the welfare of persons with disabilities,
+                 promoting access to quality education, healthcare services, human rights, and alleviating poverty.
                 </h3>
                 <ul className="">
                     <li className="goal_what_we_do">Improve the welfare of persons with disability</li>
                     <li className="goal_what_we_do">Promote access to quality education and healthcare services</li>
                     <li className="goal_what_we_do">Salvage young boys from the streets and place them into homes</li>
-                    <li className="goal_what_we_do">Alleviate the poverty levels in our communities through job creationg</li>
+                    <li className="goal_what_we_do">Alleviate the poverty levels in our communities through job creation.</li>
                 </ul>
                 <button type="button" className="flex gap-2 items-center font-bold text-white bg-[--dark-blue] whitespace-nowrap rounded-md px-4 py-2
                     text-center text-xl mt-10 md:mr-auto md:hover:translate-x-2 hover:bg-transparent md:transition-all md:duration-500 md:hover:text-[--bright-cyan]">

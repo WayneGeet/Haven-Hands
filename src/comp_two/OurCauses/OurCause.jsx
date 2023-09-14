@@ -1,10 +1,13 @@
+import {useState} from "react";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
 import 'react-lazy-load-image-component/src/effects/blur.css';
 import {causes} from "../data";
 import SectionHead from "../../components/SectionHead";
 import {GoTriangleRight} from 'react-icons//go'
 
+
 const OurCause = () => {
+  const [reveal, setReveal] = useState(false)
   return (
     <section className="bg-white py-10">
       <div className="container">
@@ -17,11 +20,11 @@ const OurCause = () => {
           {causes?.map(({image, content, title}, i) => {
             return(
               <div key={i} className="">
-                <div className="max-h-[10rem] overflow-hidden">
-                  <LazyLoadImage effect="blur" className="hover:scale-105 transition-transform duration-1000 object-fit" src={image} alt={title} />
+                <div  className="max-h-[20rem] aspect-video md:aspect-video overflow-hidden">
+                  <LazyLoadImage effect="blur" className="object-cover aspect-video md:aspect-video w-full" src={image} alt={title} />
                 </div>
-                <h4 className="text-[--dark-blue] hover:text-[--bright-cyan] font-bold text-lg pt-5 pb-3"><a href="#">{title}</a></h4>
-                <small className="text-[--grayish-blue] text_truncate">{content}</small>
+                <h4 onClick={()=> setReveal(!reveal)} className="text-[--dark-blue] hover:text-[--bright-cyan] font-bold text-lg pt-5 pb-3">{title}</h4>
+                <small className={`text-[--grayish-blue] text-base ${!reveal ? "text_truncate" : ""} `}>{content}</small>
               </div>
             )
           })}

@@ -6,6 +6,9 @@ module.exports = {
     extend: {
       gridAutoColumns:{
         colReverse:"row-reverse"
+       },
+       gridTemplateColumns:{
+        fluuidGrids:"repeat(auto-fit(250px, 1fr)"
        }
       
     },
